@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cal.css">
+    <title>Calculator</title>
+    <link rel="icon" href="pngwing.com.png" type="image/png">
+</head>
+<body>
+    <div class="full">
+        <div class="cal">
+            <input type="text" id="display" class="display" readonly>
+        </div>
+        <div class="allbuttons">
+        <div class="firstcolumn">
+            <input type="button" value="AC"class="presswhite" onclick="clearDisplay()">
+            <input type="button" value="DEl" class="presswhite" onclick="display.value=display.value.toString().slice(0,-1)">
+            <input type="button" value="%" class="presswhite" onclick="functionDisplay('%')">
+            <input type="button" value="/" class="operator" onclick="functionDisplay('/')">
+        </div>
+        <div class="secondcolumn">
+            <input type="button" value="7" class="press" onclick="functionDisplay('7')">
+            <input type="button" value="8" class="press" onclick="functionDisplay('8')">
+            <input type="button" value="9" class="press" onclick="functionDisplay('9')">
+            <input type="button" value="*" class="operator" onclick="functionDisplay('*')">
+        </div>
+        <div class="thirdcolumn">
+            <input type="button" value="4" class="press" onclick="functionDisplay('4')">
+            <input type="button" value="5" class="press" onclick="functionDisplay('5')">
+            <input type="button" value="6" class="press" onclick="functionDisplay('6')">
+            <input type="button" value="-" class="operator" onclick="functionDisplay('-')">
+        </div>
+        <div class="forthcolumn">
+            <input type="button" value="1" class="press" onclick="functionDisplay('1')">
+            <input type="button" value="2" class="press" onclick="functionDisplay('2')">
+            <input type="button" value="3" class="press" onclick="functionDisplay('3')">
+            <input type="button" value="+" class="operator" onclick="functionDisplay('+')">
+        </div>
+        <div class="fivthcolumn">
+            <input type="button" value="0" class="presszero" onclick="functionDisplay('0')">
+            <input type="button" value="." class="press" onclick="functionDisplay('.')">
+            <input type="button" value="=" class="operator" onclick="result()">
+        </div>
+        </div>
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>
